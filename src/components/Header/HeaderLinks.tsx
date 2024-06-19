@@ -5,7 +5,7 @@ const HeaderLinks = () => {
     <nav>
       <ul className="hidden lg:flex items-center justify-between gap-x-6">
         {headerLinks.map((item, index) => (
-          <HeaderLinkItem key={index} icon={item.icon} label={item.label}/>
+          <HeaderLinkItem key={index} active={item.active} icon={item.icon} label={item.label}/>
         ))}
       </ul>
     </nav>

@@ -13,7 +13,9 @@ type ModalPropsType = {
   isOpen: boolean;
   onHandleClose: () => void;
   onRedirect: () => void;
+  onHandleClickBtn: () => void;
   children: React.ReactNode,
+
 };
 const ModalAuth = ({
   isOpen,
@@ -24,17 +26,18 @@ const ModalAuth = ({
   secondaryBtnValue,
   subtitle,
   onRedirect,
-  children
+  children,
+  onHandleClickBtn
 }: ModalPropsType) => {
   
   return (
     <Modal
       disableScrollLock
-      className="h-full flex justify-center items-center"
+      className="h-full flex items-end justify-center sm:items-center"
       open={isOpen}
       onClose={onHandleClose}
     >
-      <div className="bg-white relative max-w-[370px] px-6 pb-9 pt-10 rounded-3xl flex flex-col items-center">
+      <div className="bg-white relative  w-full max-w-full sm:max-w-[370px] px-6 pb-9 pt-10 rounded-3xl flex flex-col items-center">
         <button
           className="absolute top-[21px] right-[21px]"
           onClick={onHandleClose}
@@ -52,7 +55,7 @@ const ModalAuth = ({
         </h2>
         <div className="w-full mt-8 mb-10">
           {children}
-          <Button value={btnValue} className="text-white bg-[#06082C]" />
+          <Button handleClick={onHandleClickBtn} value={btnValue} className="text-white bg-[#06082C]" />
         </div>
         <div className="w-full flex flex-col gap-y-4">
           <h3 className="text-[#9395B8] text-sm text-center">{btnTitle}</h3>

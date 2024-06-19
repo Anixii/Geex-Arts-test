@@ -10,7 +10,9 @@ const Header = ({
 }: {
   isOpen: boolean;
   onHandleClick: () => void;
-}) => {
+}) => { 
+  console.log(isOpen);
+  
   return (
     <header className="h-16 flex w-full justify-between items-center">
       <div className="flex justify-between w-full  items-center gap-x-7 xl:gap-x-12">
@@ -29,6 +31,7 @@ const Header = ({
         <div className="block lg:hidden">
           {isOpen && (
             <HeaderBurgerMenu isOpen={isOpen} onHandleClick={onHandleClick} />
+            // <p>hello</p>
           )}
           <HeaderBurgerBtn isOpen={isOpen} onHandleClick={onHandleClick} />
         </div>
