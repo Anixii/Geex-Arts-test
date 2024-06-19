@@ -7,7 +7,6 @@ const HeaderLang = () => {
   const handleChange = (selectedLang: SelectChangeEvent) => {
     setLang(selectedLang.target.value);
   };
-  console.log(lang);
   return (
     <>
       <div>
@@ -24,7 +23,7 @@ const HeaderLang = () => {
               className="flex p-0 justify-between items-center border-none"
               key={i}
             >
-              <div className="flex p-0 justify-between items-center gap-x-[6px]">
+              <div className="flex p-0  items-center gap-x-[6px]">
                 <img className="w-5 h-5" src={item.icon} alt="Lang icon" />
                 <span>{item.label}</span>
               </div>

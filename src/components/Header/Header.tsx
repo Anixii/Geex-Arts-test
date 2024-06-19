@@ -1,19 +1,37 @@
 import logo from "../../assets/icon.svg";
+import HeaderBurgerBtn from "./HeaderBurgerBtn";
+import HeaderBurgerMenu from "./HeaderBurgerMenu";
 import HeaderLang from "./HeaderLang";
 import HeaderLinks from "./HeaderLinks";
 import HeaderProfile from "./HeaderProfile";
-const Header = () => {
+const Header = ({
+  isOpen,
+  onHandleClick,
+}: {
+  isOpen: boolean;
+  onHandleClick: () => void;
+}) => {
   return (
     <header className="h-16 flex w-full justify-between items-center">
-      <div className="flex justify-between w-full  items-center gap-x-12">
+      <div className="flex justify-between w-full  items-center gap-x-7 xl:gap-x-12">
         <div>
-          <img alt="logo SportRec" className="w-[129px] h-auto" src={logo} />
+          <img
+            alt="logo SportRec"
+            className="w-[129px] h-auto max-w-none"
+            src={logo}
+          />
         </div>
         <HeaderLinks />
-      <div className="flex items-center justify-between gap-x-8">
-        <HeaderLang />
-        <HeaderProfile />
-      </div>
+        <div className="hidden lg:flex items-center justify-between gap-x-5 xl:gap-x-8">
+          <HeaderLang />
+          <HeaderProfile />
+        </div>
+        <div className="block lg:hidden">
+          {isOpen && (
+            <HeaderBurgerMenu isOpen={isOpen} onHandleClick={onHandleClick} />
+          )}
+          <HeaderBurgerBtn isOpen={isOpen} onHandleClick={onHandleClick} />
+        </div>
       </div>
     </header>
   );
