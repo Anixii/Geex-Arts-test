@@ -55,7 +55,7 @@ const ModalAuth = ({
         </h2>
         <div className="w-full mt-8 mb-10">
           {children}
-          <Button handleClick={onHandleClickBtn} value={btnValue} className="text-white bg-[#06082C]" />
+          <Button handleClick={onHandleClickBtn} value={btnValue} className="text-white w-full bg-[#06082C]" />
         </div>
         <div className="w-full flex flex-col gap-y-4">
           <h3 className="text-[#9395B8] text-sm text-center">{btnTitle}</h3>

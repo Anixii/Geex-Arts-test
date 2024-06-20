@@ -7,6 +7,7 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import FormNumber from "./components/Form/FormNumber";
 import PinCodeForm from "./components/Form/PinCodeForm";
 import MainLayout from "./components/Main/Layout";
+import { MobileLayout } from "./components/Main/MobileLayout";
 function App() {
   const [isBurgerOpen, setBurgerOpen] = useState(false);
   const onHandleClick = () => {
@@ -19,9 +20,14 @@ function App() {
         <Header isOpen={isBurgerOpen} onHandleClick={onHandleClick} />
       </Container>
       <div className={`${isBurgerOpen && "hidden"} py-[26px] bg-[#F1F3F7]`}>
+        <div className="hidden sm:block"> 
         <Container>
           <MainLayout />
         </Container>
+        </div>
+        <div  className="block sm:hidden"> 
+          <MobileLayout/>
+        </div>
         <Routes>
           <Route
             path="/login"

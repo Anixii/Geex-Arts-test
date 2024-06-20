@@ -1,12 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 * {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif !important;
 }
 
 .border_custom fieldset {
   border: none;
 }
-
+.panel__tab{ 
+  padding: 0 ; 
+  padding: 24px 0 !important;
+}
+.bg_recomend{ 
+  background-image: url('./assets/coverbg.svg'); 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+} 
+.swiper-slide{
+  width: 32% !important;
+}
+.swiper-slide-mobile{ 
+  width: 88%  !important;
+}
 @media screen and (max-width: 1024px) {
   .border_custom div {
     padding: 0;

@@ -2,6 +2,7 @@ import Button from "../../Button/Button";
 import Users from "./Users";
 import magaAva from "../../../assets/maga.svg";
 import firstMedalIcon from "../../../assets/firstMedal.svg";
+import maga from "../../../assets/maga.svg";
 const CelebratePost = () => {
   return (
     <div className="rounded-[20px] bg-white px-6 py-[28px]">
@@ -11,6 +12,8 @@ const CelebratePost = () => {
         </h3>
         <div className="mt-3">
           <Users
+            isVerificated={true}
+            icon={maga}
             subtitle="Спортсмен • Призер Олимпийских игр, двукратный призер
           чемпионатов мира"
             title="Александр Магомедов"
