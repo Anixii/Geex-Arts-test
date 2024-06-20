@@ -5,11 +5,12 @@ import { mobilePosts, mobileSlider } from "../utils/constans";
 import Banner from "./Banner/Banner";
 import NewsList from "./News/NewsList";
 import SubscriedSwiper from "./Subscried/SubscriedSwiper";
-import { FreeMode } from "swiper/modules"; 
+import { FreeMode } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/free-mode";
 import Competitives from "./Competitives/Competitives";
+import Marketplace from "./MarketPlace/Marketplace";
 
 export const MobileLayout = () => {
   return (
@@ -89,7 +90,10 @@ export const MobileLayout = () => {
           </div>
         </div>
         <Container>
-            <Competitives/>
+          <Competitives />
+        </Container>
+        <Container>
+          <Marketplace />
         </Container>
       </div>
     </main>
