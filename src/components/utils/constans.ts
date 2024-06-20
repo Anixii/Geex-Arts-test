@@ -8,6 +8,8 @@ import usa from '../../assets/usa.png'
 import vadim from '../../assets/vadim.svg'
 import artem from '../../assets/artem.svg'
 import boxing from '../../assets/box.svg'
+import bike from '../../assets/bikePost.svg' 
+import post from '../../assets/3post.svg' 
 export const headerLinks = [
     {
         href: '/', 
@@ -74,7 +76,8 @@ export const mainPosts = [
         category: 'Велоспорт', 
         time:'2 февраля, 2024 в 23:09', 
         views: '4.1 K', 
-        comments: '0'
+        comments: [], 
+        images: [bike,bike,bike,bike,bike,bike]
     },
     { 
         title: 'Запись соревнования по вольной борьбе в Санкт-Петербурге', 
@@ -84,7 +87,8 @@ export const mainPosts = [
         views: '82 K', 
         comments: [ 
             {name: 'Вадим Давыдов', title:'Романов молодец! 👍🏻', time: '15 минут назад', icon: vadim, isVerificated: false}
-        ]
+        ], 
+        images: [post,post,post]
     },
 ] 
 export const news = [ 
